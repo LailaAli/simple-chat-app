@@ -1,0 +1,62 @@
+@import '../../scss/variables';
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  height: 38px;
+  background-color: $gray;
+
+button {
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  svg{
+    path {
+      color: $white;
+    }
+  }
+  &:hover {
+    background: $grayHover;
+  }
+}
+
+.header__search{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 16px;
+  padding: 0 16px;
+  border-radius:6px ;
+  background: rgb(81,87,84);
+  box-shadow: inset 0 0 0 1px rgb(115,119,117);
+  cursor: pointer;
+  max-width: 320px;
+}
+
+.header__searchLabel {
+  color: $white;
+  margin-left: 8px;
+}
+
+.header__searchInput{
+  display: flex;
+}
+
+
+
+
+
+
+
+}
+
