@@ -11,9 +11,7 @@ export const Header = props => {
 
   return (
     <div className={ css.header }>
-      {/* <div className={ css.header__left }>
-    
-      </div> */}
+      <div className={ css.header__left }> </div>
 
       <div className={ css.header__search }>
     

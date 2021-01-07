@@ -27,7 +27,7 @@ button {
 
 .header__search{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .header__searchButton {
@@ -50,6 +50,14 @@ button {
 
 .header__searchInput{
   display: flex;
+}
+
+.header__left{
+  width: 10%;
+}
+
+.header__right{
+  justify-content: flex-end;
 }
 
 
