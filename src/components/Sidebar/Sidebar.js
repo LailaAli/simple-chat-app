@@ -14,8 +14,9 @@ import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import AppsIcon from '@material-ui/icons/Apps';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import AddIcon from '@material-ui/icons/Add';
 
 
 
@@ -51,11 +52,7 @@ export const Sidebar = props => {
     {
     icon: 'FileCopyIcon',
     title: 'File browser'
-    },
-    {
-    icon: 'ExpandLessIcon',
-    title: 'Show less'
-    },
+    }
   ]
 
   const [ channels, setChannels ] = useState( [] );
@@ -82,16 +79,18 @@ export const Sidebar = props => {
       </div>
 
       <div className={ css.sidebar__menu }>
+      <SidebarOption Icon={ArrowDropDownIcon } title={'Show less' }/>
         { sidebarMenu.map((item, key)=>(
         <SidebarOption key={item.icon} Icon={item.icon} title={item.title}></SidebarOption>
       ))}
-
       </div>
       
       <div className={ css.sidebar__channels }>
+      <SidebarOption Icon={ArrowDropDownIcon } title={'Channels' }/>
         { channels.map( channel => (
             <SidebarOption title={channel.name} id={channel.id}></SidebarOption>
-          ))}
+        ) ) }
+        <SidebarOption Icon={AddIcon } title={'Add Channel' }/>
       </div>
    </div>
   )
