@@ -4,7 +4,7 @@ import css from './Header.module.scss';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import { Avatar } from '@material-ui/core';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import SearchIcon from '@material-ui/icons/Search';;
+import SearchIcon from '@material-ui/icons/Search';
 
 export const Header = props => {
   const {user } = props;
