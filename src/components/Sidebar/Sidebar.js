@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import css from './Sidebar.module.scss';
 import { SidebarOption } from './SidebarOption';
+import db from '../../firebase';
+
+
 // Icons
 import CreateIcon from '@material-ui/icons/Create';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
@@ -55,12 +58,17 @@ export const Sidebar = props => {
     },
   ]
 
-  const channelList = [
-    {
-      icon: '',
-      title: 'Channel 01'
-    }
-  ]
+  const [ channels, setChannels ] = useState( [] );
+
+  // Run this code ONCE when the sidebar component loads
+  useEffect( () => {
+    db.collection( 'channels' ).onSnapshot( snapshot => (
+      setChannels( snapshot.docs.map( doc => ( {
+        id: doc.id,
+        name: doc.data().name
+      })))
+    ))
+  }, [])
 
   return (
     <div className={css.sidebar}>
@@ -81,9 +89,9 @@ export const Sidebar = props => {
       </div>
       
       <div className={ css.sidebar__channels }>
-      { channelList.map((item, key)=>(
-        <SidebarOption key={item.icon} Icon={item.icon} title={item.title}></SidebarOption>
-      ))}
+        { channels.map( channel => (
+            <SidebarOption title={channel.name} id={channel.id}></SidebarOption>
+          ))}
       </div>
    </div>
   )
