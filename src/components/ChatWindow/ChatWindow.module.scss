@@ -6,10 +6,27 @@
  flex: 1;
 
 .header {
-  height: 64px;
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
   padding: 10px 20px;
   border-bottom: 1px solid $purpleLight;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+}
+
+.channelName {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.icon {
+  margin: 0 5px;
+  color: $grayHover;
 }
 
 }

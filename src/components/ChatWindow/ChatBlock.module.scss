@@ -1,9 +1,46 @@
 @import '../../scss/variables';
 
 .chatBlock {
-border-top: 1px solid $gray;
-border-bottom: 1px solid $gray;
+border-top: 1px solid rgba(var(--sk_foreground_low_solid,221,221,221),1);
+padding: 20px;
+display: flex;
+align-items: flex-start;
 
+&:hover {
+  background-color: #f0f0f0;
+}
 
+.chatUserImage{
+  margin-right: 10px;
+}
+
+.userImage {
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.userIcon {
+  font-size: 50px;
+}
+
+.userName{
+  font-size: 15px;
+  font-weight: 900;
+  font-family: Slack-Lato,appleLogo,sans-serif;
+  margin-right: 10px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: rgba(var(--sk_foreground_max_solid,97,96,97),1);
+}
+
+.message {
+  margin-top: 8px;
+  color: $bodyColor;
+  user-select: text;
+}
 
 }
