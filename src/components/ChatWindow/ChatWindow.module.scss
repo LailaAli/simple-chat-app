@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+
+.chatWindow {
+ width: 100%;
+ overflow: hidden;
+ flex: 1;
+
+.header {
+  height: 64px;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid $purpleLight;
+}
+
+}
