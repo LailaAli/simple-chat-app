@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import css from './Sidebar.module.scss';
-import { SidebarOption } from './SidebarOption';
+import { SidebarOption } from './SidebarOption.jsx';
 import db from '../../firebase';
 
 
@@ -26,31 +26,31 @@ export const Sidebar = props => {
 
   const sidebarMenu = [
     {
-    icon: 'InsertCommentIcon',
+    icon: InsertCommentIcon,
     title: 'Threads'
     },
     {
-    icon: 'InboxIcon',
+    icon: InboxIcon,
     title: 'Mentions & reactions'
     },
     {
-    icon: 'DraftsIcon',
+    icon: DraftsIcon,
     title: 'Saved items'
     },
     {
-    icon: 'BookmarkBorderIcon',
+    icon: BookmarkBorderIcon,
     title: 'Channel browser'
     },
     {
-    icon: 'PeopleAltIcon',
+    icon: PeopleAltIcon,
     title: 'People & user groups'
     },
     {
-    icon: 'AppsIcon',
+    icon: AppsIcon,
     title: 'Apps'
     },
     {
-    icon: 'FileCopyIcon',
+    icon: FileCopyIcon,
     title: 'File browser'
     }
   ]
@@ -80,7 +80,7 @@ export const Sidebar = props => {
 
       <div className={ css.sidebar__menu }>
       <SidebarOption Icon={ArrowDropDownIcon } title={'Show less' }/>
-        { sidebarMenu.map((item, key)=>(
+        { sidebarMenu.map((item)=>(
         <SidebarOption key={item.icon} Icon={item.icon} title={item.title}></SidebarOption>
       ))}
       </div>

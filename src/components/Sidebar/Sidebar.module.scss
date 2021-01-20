@@ -3,11 +3,11 @@
 .sidebar{
   display: flex;
   flex-direction: column;
+  flex: 2;
   max-width: 260px;
   background-color: $purple;
   color: $white;
   padding-bottom: 30px;
-  height: 100vh;
 
   .sidebar__header {
     display: flex;
