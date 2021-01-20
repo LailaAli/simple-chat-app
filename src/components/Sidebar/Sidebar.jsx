@@ -90,7 +90,7 @@ export const Sidebar = props => {
         { channels.map( channel => (
             <SidebarOption title={channel.name} id={channel.id}></SidebarOption>
         ) ) }
-        <SidebarOption Icon={AddIcon } title={'Add Channel' }/>
+        <SidebarOption Icon={AddIcon } title={'Add Channel' } addChannelOption/>
       </div>
    </div>
   )
