@@ -69,7 +69,7 @@ export const ChatWindow = (props) => {
            <ChatBlock
               userImage={ msg.userImage }
               username={ msg.user }
-              timestamp={ msg.timestamp.seconds }
+              timestamp={ msg.timestamp }
               message={ msg.message } />
          ))}
       </div>

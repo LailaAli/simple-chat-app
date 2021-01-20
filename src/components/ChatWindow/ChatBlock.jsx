@@ -17,7 +17,7 @@ export const ChatBlock = props => {
       <div className={css.textColumn}>
         <div className={css.textHeader}>
           <span className={ css.userName }>{username }</span>
-          <span className={ css.timestamp }>{ timestamp}</span>
+          <span className={ css.timestamp }>{new Date(timestamp?.toDate()).toUTCString()}</span>
         </div>
         <div className={ css.message }>
          {message}
