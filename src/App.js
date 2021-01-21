@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import css from "./App.module.scss";
-import { LoginView } from './components/LoginView/LoginView';
+import { LoginView } from "./components/LoginView/LoginView";
 import { Header } from "./components/Header/Header.jsx";
 import { Sidebar } from "./components/Sidebar/Sidebar.jsx";
 import { ChatWindow } from "./components/ChatWindow/ChatWindow.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
 export const App = () => {
-   const [user, setUser] = useState(null);
+   const [{ user }, dispatch] = useStateValue();
 
    return (
       <div className={css.app}>
          <Router>
             {!user ? (
-               <LoginView/>
+               <LoginView />
             ) : (
                <>
                   <Header />
