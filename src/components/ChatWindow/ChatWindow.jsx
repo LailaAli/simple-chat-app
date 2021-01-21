@@ -10,10 +10,9 @@ import { useParams } from "react-router-dom";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import PersonAddOutlinedIcon from "@material-ui/icons/PersonAddOutlined";
+import { ChatTextBox } from "../ChatTextBox/ChatTextBox";
 
-export const ChatWindow = (props) => {
-   const {} = props;
-
+export const ChatWindow = () => {
    // Return an object of the channel rendered. Channel rendered is in the url.
    const { channelsId } = useParams();
    const [channelsDetails, setChannelsDetails] = useState(null);
@@ -32,11 +31,10 @@ export const ChatWindow = (props) => {
          .doc(channelsId)
          .collection("messages")
          .orderBy("timestamp", "asc")
-         .onSnapshot(snapshot => setChannelsMessages(snapshot.docs.map((doc) => doc.data())));
+         .onSnapshot((snapshot) =>
+            setChannelsMessages(snapshot.docs.map((doc) => doc.data()))
+         );
    }, [channelsId]); // <= run this useEffect everytime channelsId changes
-
-   console.log( channelsDetails );
-   console.log( channelsMessages );
 
    return (
       <div className={css.chatWindow}>
@@ -65,13 +63,19 @@ export const ChatWindow = (props) => {
             </div>
          </div>
 
-        {channelsMessages?.map( msg => (
-           <ChatBlock
-              userImage={ msg.userImage }
-              username={ msg.user }
-              timestamp={ msg.timestamp }
-              message={ msg.message } />
+         {channelsMessages?.map((msg) => (
+            <ChatBlock
+               key={Math.random()}
+               userImage={msg.userImage}
+               username={msg.user}
+               timestamp={msg.timestamp}
+               message={msg.message}
+            />
          ))}
+         <ChatTextBox
+            channelsId={channelsId}
+            channelName={channelsDetails?.name}
+         />
       </div>
    );
 };
