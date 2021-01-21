@@ -54,6 +54,9 @@
       height: 40px;
       width: 40px;
       cursor: pointer;
+      &:hover {
+         background-color: $purpleLight;
+      }
    }
 
    .sidebar__header_composeIcon {

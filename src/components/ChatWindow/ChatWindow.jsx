@@ -42,7 +42,7 @@ export const ChatWindow = () => {
             <div className={css.header_left}>
                <h4 className={css.channelName}>
                   #{channelsDetails?.name}
-                  <button className={css.button}>
+                  <button title="Favorite" className={css.button}>
                      <StarBorderOutlinedIcon
                         className={classNames(css.starIcon, css.icon)}
                      />
@@ -50,12 +50,12 @@ export const ChatWindow = () => {
                </h4>
             </div>
             <div className={css.header_right}>
-               <button className={css.button}>
+               <button title="Add person" className={css.button}>
                   <PersonAddOutlinedIcon
                      className={classNames(css.personIcon, css.icon)}
                   />
                </button>
-               <button className={css.button}>
+               <button title="Info" className={css.button}>
                   <InfoOutlinedIcon
                      className={classNames(css.infoIcon, css.icon)}
                   />

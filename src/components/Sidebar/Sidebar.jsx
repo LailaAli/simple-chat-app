@@ -85,7 +85,10 @@ export const Sidebar = () => {
                </h4>
             </div>
 
-            <button className={css.sidebar__header_composeButton}>
+            <button
+               title="Compose"
+               className={css.sidebar__header_composeButton}
+            >
                <CreateIcon className={css.sidebar__header_composeIcon} />
             </button>
          </div>

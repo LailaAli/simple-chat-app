@@ -16,15 +16,15 @@ export const Header = () => {
          <div className={css.header__left}> </div>
 
          <div className={css.header__search}>
-            <button className={css.header__timeIcon}>
+            <button title="History" className={css.header__timeIcon}>
                <AccessTimeIcon />
             </button>
-            <button className={css.header__searchButton}>
+            <button title="Search" className={css.header__searchButton}>
                <SearchIcon></SearchIcon>
                <span className={css.header__searchLabel}>Search Brightly</span>
             </button>
 
-            <button className={css.helpIcon}>
+            <button title="Help" className={css.helpIcon}>
                <HelpOutlineIcon></HelpOutlineIcon>
             </button>
          </div>
@@ -32,6 +32,7 @@ export const Header = () => {
          <div className={css.header__right}>
             <button className={css.header__avatarButton}>
                <Avatar
+                  title="Avatar"
                   className={css.header__avatar}
                   alt={user?.displayName}
                   src={user?.photoURL}
