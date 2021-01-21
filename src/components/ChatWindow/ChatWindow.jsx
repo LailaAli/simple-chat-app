@@ -70,6 +70,7 @@ export const ChatWindow = () => {
                username={msg.user}
                timestamp={msg.timestamp}
                message={msg.message}
+               className="chatBlockClass"
             />
          ))}
          <ChatTextBox

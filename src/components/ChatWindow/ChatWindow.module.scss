@@ -2,9 +2,9 @@
 
 .chatWindow {
    width: 100%;
-   overflow: hidden;
+   overflow: scroll;
    flex: 1;
-   padding-bottom: 55px;
+   padding-bottom: 100px;
 
    .header {
       display: flex;
@@ -33,4 +33,10 @@
          border-radius: 2px;
       }
    }
+
+   // .chatBlockClass {
+   //    &:last-child {
+   //       margin-bottom: 30%;
+   //    }
+   // }
 }
