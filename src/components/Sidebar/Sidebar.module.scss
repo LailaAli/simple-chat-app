@@ -1,55 +1,67 @@
-@import '../../scss/variables';
+@import "../../scss/variables";
 
-.sidebar{
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  max-width: 260px;
-  background-color: $purple;
-  color: $white;
-  padding-bottom: 30px;
+.sidebar {
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+   max-width: 260px;
+   background-color: $purple;
+   color: $white;
+   padding-bottom: 30px;
 
-  .sidebar__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-  }
+   .sidebar__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+   }
 
-  .sidebar__header_user{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-  }
+   .sidebar__header_user {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+   }
 
-  .sidebar__header_channelName{
-    font-size: 15px;
-    font-weight: 900;
-  }
+   .channelsLabel {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      background-color: transparent;
+      border: none;
+      color: $white;
+      font-size: 15px;
+      cursor: pointer;
+      width: 100%;
+      &:hover {
+         background-color: $purpleHover;
+      }
+   }
 
-  .sidebar__header_userStatusIcon {
-    margin-right: 10px;
-    font-size: 20px;
-    fill: $activeColor;
-    
-  }
+   .sidebar__header_channelName {
+      font-size: 15px;
+      font-weight: 900;
+   }
 
-  .sidebar__header_composeButton {
-    border-radius: 50%;
-    border: none;
-    height: 40px;
-    width: 40px;
-    cursor: pointer;
-  }
+   .sidebar__header_userStatusIcon {
+      margin-right: 10px;
+      font-size: 20px;
+      fill: $activeColor;
+   }
 
-  .sidebar__header_composeIcon {
-    font-size: 18px;
-    fill: $purple
-  }
+   .sidebar__header_composeButton {
+      border-radius: 50%;
+      border: none;
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+   }
 
-  .sidebar__channels {
-    margin-top: 30px;
-  }
+   .sidebar__header_composeIcon {
+      font-size: 18px;
+      fill: $purple;
+   }
 
+   .sidebar__channels {
+      margin-top: 30px;
+   }
 }
-

@@ -1,28 +1,25 @@
-@import '../../scss/variables';
+@import "../../scss/variables";
 
 .sidebarOption {
- 
-  &:hover {
-    opacity: 0.9;
-    background-color: $purpleHover;
-    cursor: pointer;
-    
-  }
-  .icon {
-    font-size: 20px;
-    padding-right: 10px;
-  }
+   &:hover {
+      opacity: 0.9;
+      background-color: $purpleHover;
+      cursor: pointer;
+   }
+   .icon {
+      font-size: 20px;
+      padding-right: 8px;
+   }
 
-  .hastagSymbol {
-    margin-right: 15px;
-  }
+   .hastagSymbol {
+      margin-right: 8px;
+   }
 
-  h3 {
-    display: flex;
-    align-items: center;
-    // text-transform: lowercase;
-    padding: 8px 15px;
-    font-size: 15px;
-    font-weight: 500;
-  }
+   h3 {
+      display: flex;
+      align-items: center;
+      padding: 8px 15px;
+      font-size: 15px;
+      font-weight: 500;
+   }
 }
