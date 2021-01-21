@@ -1,72 +1,64 @@
-@import '../../scss/variables';
+@import "../../scss/variables";
 
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 16px;
-  height: 38px;
-  background-color: $purple;
-  border-bottom: 1px solid $purpleLight;
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 16px;
+   height: 38px;
+   background-color: $purple;
+   border-bottom: 1px solid $purpleLight;
 
-button {
-  border: none;
-  border-radius: 6px;
-  background-color: transparent;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  svg{
-    path {
+   button {
+      border: none;
+      border-radius: 6px;
+      background-color: transparent;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      svg {
+         path {
+            color: $white;
+         }
+      }
+      &:hover {
+         background: $purpleHover;
+      }
+   }
+
+   .header__search {
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   .header__searchButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 16px;
+      padding: 0 16px;
+      border-radius: 6px;
+      background: $purpleMedium;
+      box-shadow: inset 0 0 0 1px $purpleLight;
+      cursor: pointer;
+      width: 320px;
+      max-width: 320px;
+   }
+
+   .header__searchLabel {
       color: $white;
-    }
-  }
-  &:hover {
-    background: $grayHover;
-  }
+      margin-left: 8px;
+   }
+
+   .header__searchInput {
+      display: flex;
+   }
+
+   .header__left {
+      width: 10%;
+   }
+
+   .header__right {
+      justify-content: flex-end;
+   }
 }
-
-.header__search{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.header__searchButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 16px;
-  padding: 0 16px;
-  border-radius:6px ;
-  background: $purpleMedium;
-  box-shadow: inset 0 0 0 1px $purpleLight;
-  cursor: pointer;
-  width: 320px;
-  max-width: 320px;
-}
-
-.header__searchLabel {
-  color: $white;
-  margin-left: 8px;
-}
-
-.header__searchInput{
-  display: flex;
-}
-
-.header__left{
-  width: 10%;
-}
-
-.header__right{
-  justify-content: flex-end;
-}
-
-
-
-
-
-
-
-}
-
