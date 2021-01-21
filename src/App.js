@@ -1,26 +1,35 @@
+import React, { useState } from "react";
 import css from "./App.module.scss";
+import { LoginView } from './components/LoginView/LoginView';
 import { Header } from "./components/Header/Header.jsx";
 import { Sidebar } from "./components/Sidebar/Sidebar.jsx";
 import { ChatWindow } from "./components/ChatWindow/ChatWindow.jsx";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {ChatBlock} from './components/ChatWindow/ChatBlock'
 
 export const App = () => {
+   const [user, setUser] = useState(null);
+
    return (
       <div className={css.app}>
          <Router>
-            <Header />
-            <div className={css.appBody}>
-               <Sidebar />
-               <Switch>
-                  <Route path="/channels/:channelsId">
-                     <ChatWindow/>
-                  </Route>
-                  <Route path="/">
-                     <ChatWindow />
-                  </Route>
-               </Switch>
-            </div>
+            {!user ? (
+               <LoginView/>
+            ) : (
+               <>
+                  <Header />
+                  <div className={css.appBody}>
+                     <Sidebar />
+                     <Switch>
+                        <Route path="/channels/:channelsId">
+                           <ChatWindow />
+                        </Route>
+                        <Route path="/">
+                           <ChatWindow />
+                        </Route>
+                     </Switch>
+                  </div>
+               </>
+            )}
          </Router>
       </div>
    );
