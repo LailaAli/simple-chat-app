@@ -123,6 +123,7 @@ export const Sidebar = () => {
                      ></SidebarOption>
                   ))}
                   <SidebarOption
+                     customClass="addChannelLabel"
                      Icon={AddIcon}
                      title={"Add Channel"}
                      addChannelOption

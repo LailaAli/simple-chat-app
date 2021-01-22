@@ -24,7 +24,7 @@ export const App = () => {
                         <Route path="/channels/:channelsId">
                            <ChatWindow />
                         </Route>
-                        <Route path="/">
+                        <Route Route path="/channels/S15RVy0RNVb0huxiuqPu">
                            <ChatWindow />
                         </Route>
                      </Switch>
