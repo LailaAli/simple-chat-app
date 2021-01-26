@@ -13,6 +13,7 @@ export const App = () => {
    return (
       <div className={css.app}>
          <Router>
+            {" "}
             {!user ? (
                <LoginView />
             ) : (
@@ -23,15 +24,15 @@ export const App = () => {
                      <Switch>
                         <Route path="/channels/:channelsId">
                            <ChatWindow />
-                        </Route>
-                        <Route Route path="/channels/S15RVy0RNVb0huxiuqPu">
+                        </Route>{" "}
+                        <Route Route path="/">
                            <ChatWindow />
-                        </Route>
-                     </Switch>
-                  </div>
+                        </Route>{" "}
+                     </Switch>{" "}
+                  </div>{" "}
                </>
-            )}
-         </Router>
+            )}{" "}
+         </Router>{" "}
       </div>
    );
 };
